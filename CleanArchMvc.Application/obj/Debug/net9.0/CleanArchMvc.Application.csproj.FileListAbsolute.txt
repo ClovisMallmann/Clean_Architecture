@@ -1,0 +1,11 @@
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/bin/Debug/net9.0/CleanArchMvc.Application.deps.json
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/bin/Debug/net9.0/CleanArchMvc.Application.dll
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/bin/Debug/net9.0/CleanArchMvc.Application.pdb
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/CleanArchMvc.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/CleanArchMvc.Application.AssemblyInfoInputs.cache
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/CleanArchMvc.Application.AssemblyInfo.cs
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/CleanArchMvc.Application.csproj.CoreCompileInputs.cache
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/CleanArchMvc.Application.dll
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/refint/CleanArchMvc.Application.dll
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/CleanArchMvc.Application.pdb
+/Users/clovis_mac/Documents/Projetos/Macoratti/CleanArch/CleanArchMvc/CleanArchMvc.Application/obj/Debug/net9.0/ref/CleanArchMvc.Application.dll
