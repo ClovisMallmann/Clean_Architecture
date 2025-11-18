@@ -1,8 +1,5 @@
-using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Domain.Validation;
-{
-    
-}
+
 
 namespace CleanArchMvc.Domain.Entities
 {

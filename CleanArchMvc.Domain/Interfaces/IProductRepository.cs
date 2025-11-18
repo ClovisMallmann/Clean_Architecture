@@ -7,9 +7,9 @@ namespace CleanArchMvc.Domain.Interfaces
     {
         //Task significa que o método é assíncrono 
       Task<IEnumerable<Product>> GetProductAsync(); //Retorna todas as categorias
-      Task<Product> GetByIdAsync(int? ind); //Retorna uma categoria pelo Id
+      Task<Product> GetByIdAsync(int Id); //Retorna uma categoria pelo Id
 
-      Task<IEnumerable<Product>> GetProductsByCategoryAsync(int categoryId); //Retorna produtos por categoria
+      Task<IEnumerable<Product>> GetProductsByCategoryAsync(int CategoryId); //Retorna produtos por categoria
 
       //Metodos para manipulação de dados
       Task<Product> Create(Product product); //Retorna a categoria criada com o Id gerado

@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using CleanArchMvc.Domain.Entities;
 
 namespace CleanArchMvc.Infra.Data.Context
 {

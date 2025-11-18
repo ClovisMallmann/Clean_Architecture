@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "CleanArchMvc.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CleanArchMvc.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArchMvc.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CleanArchMvc.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CleanArchMvc.Domain/CleanArchMvc.Domain.csproj",
+      "msbuildProject": "../CleanArchMvc.Domain/CleanArchMvc.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "CleanArchMvc.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/clovis_mac/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Domain/CleanArchMvc.Domain.csproj": {
+              "projectPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Domain/CleanArchMvc.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

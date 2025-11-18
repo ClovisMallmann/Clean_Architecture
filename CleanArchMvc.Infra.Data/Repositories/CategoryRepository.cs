@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Domain.Interfaces;
 using CleanArchMvc.Infra.Data.Context;
@@ -11,7 +14,7 @@ namespace CleanArchMvc.Infra.Data.Repositories
     public class CategoryRepository : ICategoryRepository
     {
         //Injeção, no construtor, da dependência do ApplicationDbContext (banco de dados)
-       ApplicationDbContext _context;
+       private readonly ApplicationDbContext _context;
         public CategoryRepository(ApplicationDbContext context)
         {
             _context = context;
@@ -24,7 +27,7 @@ namespace CleanArchMvc.Infra.Data.Repositories
            return category;
         }
 
-        public async Task<Category> GetById(int? id)
+        public async Task<Category> GetByIdAsync(int? id)
         {
             return await _context.Categories.FindAsync(id); //FindAsync procura pela chave primária na tabela Categories
         }
@@ -51,3 +54,14 @@ namespace CleanArchMvc.Infra.Data.Repositories
        
     }
 }
+
+/*
+
+      Task<IEnumerable<Category>> GetCategories(); //Retorna todas as categorias
+      Task<Category> GetByIdAsync(int? ind); //Retorna uma categoria pelo Id
+
+   
+    }
+
+
+*/
