@@ -25,3 +25,5 @@
 /Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/obj/Debug/net9.0/CleanArchMvc.Infra.IoC.sourcelink.json
 /Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/obj/Debug/net9.0/CleanArc.C4193000.Up2Date
 /Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/obj/Debug/net9.0/ref/CleanArchMvc.Infra.IoC.dll
+/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/bin/Debug/net9.0/CleanArchMvc.Infra.Data.dll
+/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/bin/Debug/net9.0/CleanArchMvc.Infra.Data.pdb

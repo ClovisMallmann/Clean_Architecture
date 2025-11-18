@@ -63,14 +63,14 @@
         }
       }
     },
-    "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/CleanArchMvc.Infra.IoC.csproj": {
+    "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/CleanArchMvc.Infra.IoC.csproj",
-        "projectName": "CleanArchMvc.Infra.IoC",
-        "projectPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/CleanArchMvc.Infra.IoC.csproj",
+        "projectUniqueName": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj",
+        "projectName": "CleanArchMvc.Infra.Data",
+        "projectPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj",
         "packagesPath": "/Users/clovis_mac/.nuget/packages/",
-        "outputPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/obj/",
+        "outputPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/clovis_mac/.nuget/NuGet/NuGet.Config"
@@ -106,6 +106,100 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/CleanArchMvc.Infra.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/CleanArchMvc.Infra.IoC.csproj",
+        "projectName": "CleanArchMvc.Infra.IoC",
+        "projectPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/CleanArchMvc.Infra.IoC.csproj",
+        "packagesPath": "/Users/clovis_mac/.nuget/packages/",
+        "outputPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.IoC/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/clovis_mac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Domain/CleanArchMvc.Domain.csproj": {
+                "projectPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Domain/CleanArchMvc.Domain.csproj"
+              },
+              "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj": {
+                "projectPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
