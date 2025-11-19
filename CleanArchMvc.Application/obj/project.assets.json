@@ -1,10 +1,10 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {
+    "net8.0": {
       "CleanArchMvc.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
+        "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
           "bin/placeholder/CleanArchMvc.Domain.dll": {}
         },
@@ -22,7 +22,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net9.0": [
+    "net8.0": [
       "CleanArchMvc.Domain >= 1.0.0"
     ]
   },
@@ -42,14 +42,14 @@
         "/Users/clovis_mac/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net9.0"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {
             "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Domain/CleanArchMvc.Domain.csproj": {
               "projectPath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Domain/CleanArchMvc.Domain.csproj"
@@ -70,8 +70,8 @@
       "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net9.0": {
-        "targetAlias": "net9.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "imports": [
           "net461",
           "net462",

@@ -13,7 +13,7 @@ public static class DependencyInjection
     {
         // Adiciona o DbContext com a string de conexão do appsettings.json
         services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlite(configuration.GetConnectionString("DefaultConnection"),
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"),
             b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
         // Adiciona os repositórios ao contêiner de injeção de dependência
