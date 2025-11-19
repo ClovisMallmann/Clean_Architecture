@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "c2eCIolBSQU=",
+  "dgSpecHash": "+OSICRRXbbs=",
   "success": true,
   "projectFilePath": "/Users/clovis_mac/Documents/Projetos/Macoratti/Clean_Architecture/CleanArchMvc.Application/CleanArchMvc.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/clovis_mac/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
+    "/Users/clovis_mac/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
