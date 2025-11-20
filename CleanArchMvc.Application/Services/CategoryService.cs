@@ -7,19 +7,19 @@ namespace CleanArchMvc.Application.Services
 {
     public class CategoryService : ICategoryService
     {
-        //Injeção de dependência do repositório de categorias e do Mapper
         private ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
+        
         public CategoryService(ICategoryRepository categoryRepository, IMapper mapper)
         {
             _categoryRepository = categoryRepository;
             _mapper = mapper;
         }
 
-         public async Task<IEnumerable<CategoryDTO>> GetCategories()
+        public async Task<IEnumerable<CategoryDTO>> GetCategories()
         {
-            var categoriesEntity = await _categoryRepository.GetCategories(); //Obtém as categorias do repositório
-            return _mapper.Map<IEnumerable<CategoryDTO>>(categoriesEntity); //Mapeia as entidades para DTOs e retorna
+            var categoriesEntity = await _categoryRepository.GetCategories();
+            return _mapper.Map<IEnumerable<CategoryDTO>>(categoriesEntity);
         }
 
         public async Task<CategoryDTO> GetById(int? id)
@@ -28,28 +28,25 @@ namespace CleanArchMvc.Application.Services
             return _mapper.Map<CategoryDTO>(categoryEntity);
         }
 
-        public async Task Create(CategoryDTO categoryDto)
+        public async Task<CategoryDTO> Create(CategoryDTO categoryDto)
         {
-            //Nesse caso, recebe-se um CategoryDTO, mapeia para a entidade Category e 
-            // chama o repositório para criar a categoria
-
             var categoryEntity = _mapper.Map<Domain.Entities.Category>(categoryDto);
             await _categoryRepository.Create(categoryEntity);
+            return categoryDto; // Retorna o DTO após a criação
         }
 
-         public async Task Update(CategoryDTO categoryDto)
+        public async Task<CategoryDTO> Update(CategoryDTO categoryDto)
         {
-            var categoyEntity = _mapper.Map<Domain.Entities.Category>(categoryDto);
-            await _categoryRepository.Update(categoyEntity);
+            var categoryEntity = _mapper.Map<Domain.Entities.Category>(categoryDto);
+            await _categoryRepository.Update(categoryEntity);
+            return categoryDto; // Retorna o DTO após a atualização
         }
 
-        public async Task Remove(int? id)
+        public async Task<CategoryDTO> Remove(int? id)
         {
-            var categoryEntity = _categoryRepository.GetByIdAsync(id).Result; //o Result é usado para obter o valor 
-                                                                              // da Task de forma síncrona
+            var categoryEntity = await _categoryRepository.GetByIdAsync(id);
             await _categoryRepository.Remove(categoryEntity);
+            return _mapper.Map<CategoryDTO>(categoryEntity); // Retorna o DTO da entidade removida
         }
-
-       
     }
 }

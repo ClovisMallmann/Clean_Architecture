@@ -1,9 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration; // Para IConfiguration
 using Microsoft.Extensions.DependencyInjection; // Para IServiceCollection
 using Microsoft.EntityFrameworkCore; // Para UseSqlServer e métodos do EF
-using CleanArchMvc.Infra.Data.Context; // Para ApplicationDbContext (ajuste conforme seu namespace)
+using AutoMapper; // Para AutoMapper
+using CleanArchMvc.Infra.Data.Context; // Para ApplicationDbContext
 using CleanArchMvc.Domain.Interfaces; // Para IProductRepository e ICategoryRepository
 using CleanArchMvc.Infra.Data.Repositories; // Para ProductRepository e CategoryRepository
+using CleanArchMvc.Application.Mappings;
+using CleanArchMvc.Application.Interfaces; // Para DomainToDTOMappingProfile
+using CleanArchMvc.Application.Services; // Para ProductService e CategoryService
+
 
 namespace CleanArchMvc.Infra.IoC;
 
@@ -19,6 +24,10 @@ public static class DependencyInjection
         // Adiciona os repositórios ao contêiner de injeção de dependência
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+        services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<ICategoryService, CategoryService>();  
+        services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
         return services;
     }

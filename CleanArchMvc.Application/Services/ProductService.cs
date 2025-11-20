@@ -11,27 +11,29 @@ namespace CleanArchMvc.Application.Services
 {
     public class ProductService : IProductService
     {
-        //Injeção de dependência do repositório de categorias e do Mapper
         private IProductRepository _productRepository;
         private readonly IMapper _mapper;
+        
         public ProductService(IProductRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
-    
-        public async Task<IEnumerable<ProductDTO>> GetProductAsync()
+
+        public async Task<IEnumerable<ProductDTO>> GetProducts()
         {
             var productsEntity = await _productRepository.GetProductAsync();
             return _mapper.Map<IEnumerable<ProductDTO>>(productsEntity);
         }
 
-        public async Task<ProductDTO> GetByIdAsync(int id)
+        // CORREÇÃO: Alterar para GetById (com parâmetro nullable) para corresponder à interface
+        public async Task<ProductDTO> GetById(int? id)
         {
-            var productsEntity = await _productRepository.GetByIdAsync(id);
-            return _mapper.Map<ProductDTO>(productsEntity);
+            var productEntity = await _productRepository.GetByIdAsync(id.Value);
+            return _mapper.Map<ProductDTO>(productEntity);
         }
 
+        // Este método parece não estar na interface - considere removê-lo ou adicionar à interface
         public async Task<ProductDTO> GetProductCategory(int categoryId)
         {
             var productsEntity = await _productRepository.GetProductsByCategoryAsync(categoryId);
@@ -40,30 +42,25 @@ namespace CleanArchMvc.Application.Services
 
         public async Task<ProductDTO> Create(ProductDTO productDto)
         {
-            var productsEntity = _mapper.Map<Product>(productDto);
-            var created = await _productRepository.Create(productsEntity);
+            var productEntity = _mapper.Map<Product>(productDto);
+            var created = await _productRepository.Create(productEntity);
             return _mapper.Map<ProductDTO>(created);
         }
 
-        public async Task Update(ProductDTO productDto)
+        // CORREÇÃO: Alterar tipo de retorno para Task<ProductDTO>
+        public async Task<ProductDTO> Update(ProductDTO productDto)
         {
-            var productsEntity = _mapper.Map<Product>(productDto);
-            await _productRepository.Update(productsEntity);
+            var productEntity = _mapper.Map<Product>(productDto);
+            await _productRepository.Update(productEntity);
+            return productDto; // Retorna o DTO após a atualização
         }
 
-        public async Task Remove(int? id)
+        // CORREÇÃO: Alterar tipo de retorno para Task<ProductDTO>
+        public async Task<ProductDTO> Remove(int? id)
         {
-            var productEntity = _productRepository.GetByIdAsync(id.Value).Result;
+            var productEntity = await _productRepository.GetByIdAsync(id.Value);
             await _productRepository.Remove(productEntity);
+            return _mapper.Map<ProductDTO>(productEntity); // Retorna o DTO da entidade removida
         }
     }
 }
-
-
-/*
-
-      Task<Product> GetByIdAsync(int Id); //Retorna uma categoria pelo Id
-
-      Task<IEnumerable<Product>> GetProductsByCategoryAsync(int CategoryId); 
-
-*/
